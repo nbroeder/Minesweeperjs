@@ -1,141 +1,139 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Minesweeper</title>
-        <script>
-            function checkForMine(){
-                document.getElementById('btn').innerHTML='pressed';
-            }
-        </script>
-    </head>
 
-    <body>
-       <!-- <button id="btn">click me</button>
+<head>
+    <title>Minesweeper</title>
+    <script type="text/javascript" src="Minesweeper.js"></script>
 
-        <script src='Minesweeper.js'>createGame()</script>-->
-        <table>
-            <tr>
-                <td><button onclick="checkForMine()" id='btn'>click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-                <td><button onclick="checkForMine()">click</button></td>
-            </tr>
-        </table>
-        
-    </body>
+</head>
+
+<body>
+
+    <script>createGame()</script>
+    <table>
+        <tr>
+            <td><button onclick="checkForMine('btn0',0)" id='btn0'>click</button></td>
+            <td><button onclick="checkForMine('btn1',1)" id='btn1'>click</button></td>
+            <td><button onclick="checkForMine('btn2',2)" id='btn2'>click</button></td>
+            <td><button onclick="checkForMine('btn3',3)" id='btn3'>click</button></td>
+            <td><button onclick="checkForMine('btn4',4)" id='btn4'>click</button></td>
+            <td><button onclick="checkForMine('btn5',5)" id='btn5'>click</button></td>
+            <td><button onclick="checkForMine('btn6',6)" id='btn6'>click</button></td>
+            <td><button onclick="checkForMine('btn7',7)" id='btn7'>click</button></td>
+            <td><button onclick="checkForMine('btn8',8)" id='btn8'>click</button></td>
+            <td><button onclick="checkForMine('btn9',9)" id='btn9'>click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+            <td><button onclick="checkForMine()">click</button></td>
+        </tr>
+    </table>
+
+</body>
+
 </html>
