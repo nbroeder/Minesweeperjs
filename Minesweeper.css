@@ -2,9 +2,18 @@
 .btn{
     height:50px;
     width:50px;
+    background-color:rgb(95, 95, 95);
+    
 }
+
 
 .center-table{
     margin-left:auto;
     margin-right:auto;
 }
+
+ .clicked-btn{
+    height:50px;
+    width:50px;
+    background-color:rgb(243, 243, 243);
+} 

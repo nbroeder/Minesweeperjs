@@ -27,7 +27,7 @@ for (let i = 0; i < 10; i++) {
 
 function addAdjacentMines(rand) {
 
-    if ((rand+1) % 10 != 0) {
+    if ((rand + 1) % 10 != 0) {
 
         if (rand < 99) {
             btn[rand + 1].adjacentMines++;
@@ -74,6 +74,7 @@ function createGame() {
             document.getElementById('table').childNodes[1].childNodes[i].childNodes[j].firstChild.addEventListener("click",
                 checkForMine, false);
 
+
             //adds an id to the buttons that tell if the button is a mine or how many mines are adjacent to the button.
             if (btn[((i / 2) * 10 + ((j - 1) / 2))].mine == true) {
                 document.getElementById('table').childNodes[1].childNodes[i].childNodes[j].firstChild.id = "mine";
@@ -91,21 +92,26 @@ function createGame() {
 
 
 
-//checks the id of the button to seee if its a mine.
-function checkForMine(i, j) {
-
+//checks the id of the button to seee if its a mine. The function then outputs the number of 
+//mines adjacent as well as changing the class of the button so the color changes.
+function checkForMine() {
+    this.className="clicked-btn";
 
     if (this.id == "mine") {
         this.innerText = "mine";
     } else if (this.id == "") {
-        autoClear(this)
+        
         this.innerText = "";
     } else {
         this.innerText = this.id;
     }
 
+    this.className="clicked-btn";
+    
+
 }
 
-function autoClear(element){
+function autoClear(element) {
     console.log(element.parentNode);
 }
+
