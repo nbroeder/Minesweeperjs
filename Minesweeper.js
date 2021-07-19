@@ -9,6 +9,7 @@ function button() {
 }
 
 var btn = [];
+let buttonsClicked=0;
 
 
 
@@ -62,12 +63,16 @@ function checkForMine() {
             this.innerText = "mine";
             alert("you lose");
         } else if (this.id == "") {
-
             this.innerText = "";
+            buttonsClicked++;
         } else {
             this.innerText = this.id;
+            buttonsClicked++;
         }
-
+        
+        if(buttonsClicked==90){
+            alert("congratulations you found all the mines!");
+        }
 
     }else if(this.className=="flagged-btn"){
         
