@@ -9,7 +9,7 @@ function button() {
 }
 
 var btn = [];
-let buttonsClicked=0;
+let buttonsClicked = 0;
 
 
 
@@ -57,28 +57,29 @@ function addAdjacentMines(rand) {
 function checkForMine() {
 
     if (document.getElementById("flagBtn").className == "flag-off") {
-        this.className = "clicked-btn";
 
-        if (this.id == "mine") {
-            this.innerText = "mine";
-            alert("you lose");
-        } else if (this.id == "") {
-            this.innerText = "";
-            buttonsClicked++;
-        } else {
-            this.innerText = this.id;
-            buttonsClicked++;
-        }
-        
-        if(buttonsClicked==90){
-            alert("congratulations you found all the mines!");
-        }
+        if (this.className != "clicked-btn") {
+            if (this.id == "mine") {
+                this.innerText = "mine";
+                alert("you lose");
+            } else if (this.id == "") {
+                this.innerText = "";
+                buttonsClicked++;
+            } else {
+                this.innerText = this.id;
+                buttonsClicked++;
+            }
 
-    }else if(this.className=="flagged-btn"){
-        
-        this.className="btn";
-    }else if (this.className!="clicked-btn"){
-        this.className="flagged-btn";
+            if (buttonsClicked == 88) {
+                alert("congratulations you found all the mines!");
+            }
+            this.className = "clicked-btn";
+        }
+    } else if (this.className == "flagged-btn") {
+
+        this.className = "btn";
+    } else if (this.className != "clicked-btn") {
+        this.className = "flagged-btn";
     }
 
 }
@@ -102,7 +103,7 @@ function createGame() {
     }
 
     //add mines to the button objects
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {
         let rand = Math.floor(Math.random() * 100);
 
         if (btn[rand].mine == false) {
@@ -138,10 +139,6 @@ function createGame() {
 
 
 }
-
-
-
-
 
 function autoClear(element) {
     console.log(element.parentNode);
