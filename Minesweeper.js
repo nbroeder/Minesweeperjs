@@ -60,6 +60,7 @@ function checkForMine() {
 
         if (this.id == "mine") {
             this.innerText = "mine";
+            alert("you lose");
         } else if (this.id == "") {
 
             this.innerText = "";
@@ -68,7 +69,10 @@ function checkForMine() {
         }
 
 
-    }else{
+    }else if(this.className=="flagged-btn"){
+        
+        this.className="btn";
+    }else if (this.className!="clicked-btn"){
         this.className="flagged-btn";
     }
 
