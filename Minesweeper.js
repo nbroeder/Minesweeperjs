@@ -10,20 +10,7 @@ function button() {
 
 var btn = [];
 
-for (let i = 0; i < 100; i++) {
-    btn[i] = new button;
-}
 
-for (let i = 0; i < 10; i++) {
-    let rand = Math.floor(Math.random() * 100);
-
-    if (btn[rand].mine == false) {
-        btn[rand].mine = true;
-        addAdjacentMines(rand);
-    } else {
-        i--;
-    }
-}
 
 function addAdjacentMines(rand) {
 
@@ -64,8 +51,61 @@ function addAdjacentMines(rand) {
     }
 }
 
+//checks the id of the button to seee if its a mine. The function then outputs the number of 
+//mines adjacent as well as changing the class of the button so the color changes.
+function checkForMine() {
 
+    if (document.getElementById("flagBtn").className == "flag-off") {
+        this.className = "clicked-btn";
+
+        if (this.id == "mine") {
+            this.innerText = "mine";
+        } else if (this.id == "") {
+
+            this.innerText = "";
+        } else {
+            this.innerText = this.id;
+        }
+
+
+    }else{
+        this.className="flagged-btn";
+    }
+
+}
+
+//switches the status of the flagger to on or off
+function switchFlag() {
+    if (this.className == "flag-off") {
+        this.className = "flag-on";
+        this.innerText = "flag:on"
+    } else {
+        this.className = "flag-off";
+        this.innerText = "flag:off"
+    }
+}
+
+//main function that initializes the game
 function createGame() {
+    //initialize an array of button objects that represent the buttons in the game
+    for (let i = 0; i < 100; i++) {
+        btn[i] = new button;
+    }
+
+    //add mines to the button objects
+    for (let i = 0; i < 10; i++) {
+        let rand = Math.floor(Math.random() * 100);
+
+        if (btn[rand].mine == false) {
+            btn[rand].mine = true;
+            addAdjacentMines(rand);
+        } else {
+            i--;
+        }
+    }
+    //add an event listener to the flgger button 
+    document.getElementById("flagBtn").addEventListener("click", switchFlag, false);
+
     //adds an event listener to each button in the game. The event listener calls a function that will check to see if the button is a mine. 
     for (let i = 0; i < 20; i += 2) {
 
@@ -92,24 +132,7 @@ function createGame() {
 
 
 
-//checks the id of the button to seee if its a mine. The function then outputs the number of 
-//mines adjacent as well as changing the class of the button so the color changes.
-function checkForMine() {
-    this.className="clicked-btn";
 
-    if (this.id == "mine") {
-        this.innerText = "mine";
-    } else if (this.id == "") {
-        
-        this.innerText = "";
-    } else {
-        this.innerText = this.id;
-    }
-
-    this.className="clicked-btn";
-    
-
-}
 
 function autoClear(element) {
     console.log(element.parentNode);

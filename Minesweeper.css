@@ -6,14 +6,36 @@
     
 }
 
+.clicked-btn{
+    height:50px;
+    width:50px;
+    background-color:rgb(243, 243, 243);
+} 
 
+.flagged-btn{
+    height:50px;
+    width:50px;
+    background-color:red;
+} 
+
+.flag-off{
+    margin-left:45%;
+    margin-right:45%;
+    height:50px;
+    width:100px;
+    background-color: lightgray;
+}
+
+.flag-on{
+    margin-left:45%;
+    margin-right:45%;
+    height:50px;
+    width:100px;
+    background-color: rgb(255, 71, 71);
+}
 .center-table{
     margin-left:auto;
     margin-right:auto;
 }
 
- .clicked-btn{
-    height:50px;
-    width:50px;
-    background-color:rgb(243, 243, 243);
-} 
+ 
