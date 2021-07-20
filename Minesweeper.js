@@ -9,6 +9,10 @@ function button() {
 }
 
 var btn = [];
+
+let seconds=0;
+let mines=12;
+let flagsPlaced=0;
 let buttonsClicked = 0;
 
 
@@ -78,8 +82,12 @@ function checkForMine() {
     } else if (this.className == "flagged-btn") {
 
         this.className = "btn";
+        flagsPlaced--;
+        document.getElementById("remainingMines").innerText="Mines: "+(mines-flagsPlaced);
     } else if (this.className != "clicked-btn") {
         this.className = "flagged-btn";
+        flagsPlaced++;
+        document.getElementById("remainingMines").innerText="Mines: "+(mines-flagsPlaced);
     }
 
 }
@@ -95,15 +103,24 @@ function switchFlag() {
     }
 }
 
+//function to run the timer
+function updateTimer(){
+    seconds++;
+    document.getElementById("timer").innerText="Time:"+seconds;
+}
+//--------------------------------------------------------------------------\\
 //main function that initializes the game
 function createGame() {
+    setInterval(updateTimer,1000);
+    document.getElementById("remainingMines").innerText="Mines: "+(mines-flagsPlaced);
+
     //initialize an array of button objects that represent the buttons in the game
     for (let i = 0; i < 100; i++) {
         btn[i] = new button;
     }
 
     //add mines to the button objects
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < mines; i++) {
         let rand = Math.floor(Math.random() * 100);
 
         if (btn[rand].mine == false) {

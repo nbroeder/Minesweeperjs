@@ -19,23 +19,29 @@
 } 
 
 .flag-off{
-    margin-left:45%;
-    margin-right:45%;
+    display: inline-block;
     height:50px;
     width:100px;
     background-color: lightgray;
 }
 
 .flag-on{
-    margin-left:45%;
-    margin-right:45%;
+    display: inline-block;
     height:50px;
     width:100px;
     background-color: red;
 }
+
 .center-table{
     margin-left:auto;
     margin-right:auto;
+}
+
+.labels{
+    display: inline-block;
+    margin-left: 40%;
+    font-size: 1.5em;
+    
 }
 
  
